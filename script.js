@@ -97,3 +97,17 @@ document.querySelectorAll('.elem').forEach((element) => {
     })
 })
 
+
+const ourText = new SplitType('#textAnimation', { types: 'chars' });
+const chars = ourText.chars
+
+gsap.fromTo(
+    chars,
+    { 
+      opacity: 0
+    },
+    {
+      opacity: 1,
+      stagger: 0.02,
+    }
+  )
